@@ -22,39 +22,6 @@ O FireCards foi desenvolvido como solução a um desafio técnico full stack, se
 - **Frontend**: HTML5 semântico, CSS3 customizado com variáveis globais (`:root`) e JavaScript Vanilla (Modular e assíncrono via Fetch API).
 - **Infraestrutura**: Docker e Docker Compose para containerização e portabilidade total do ambiente.
 
-## 📁 Estrutura de Diretórios do Projeto
-
-
-/firecards
-├── docker-compose.yml       # Orquestração dos containers (Web + DB)
-├── Dockerfile                # Configuração do ambiente PHP 8.2 + Apache + PDO
-├── init.sql                  # Script de criação de tabelas e massa de dados inicial
-└── src/                       # Raiz pública do servidor web
-    ├── index.html             # Tela de Login e Cadastro
-    ├── dashboard.html         # Painel Administrativo Principal
-    ├── assets/
-    |   ├──documents
-    |   |   design_cardgame.pdf
-    |   |    Processo Seletivo.pdf
-    │   └── img/
-    │       └── Logo.png       # Logotipo oficial do sistema
-    ├── api/                   # Endpoints do Backend (PHP)
-    │   ├── db.php             # Conexão centralizada PDO
-    │   ├── login.php          # Autenticação de usuários
-    │   ├── register.php       # Cadastro de novos usuários
-    │   ├── logout.php         # Encerramento de sessão
-    │   ├── get_cards.php      # Listagem de todas as cartas
-    │   ├── get_card.php       # Consulta de carta unitária por ID
-    │   ├── save_card.php      # Inclusão e Edição (Upsert) de cartas
-    │   ├── delete_card.php    # Exclusão de cartas
-    │   └── editions.php       # Retorno dinâmico de edições por jogo
-    ├── css/
-    │   └── style.css          # Folha de estilos global unificada
-    └── js/
-        ├── auth.js             # Lógica de controle do formulário de login/registro
-        └── cards.js            # Lógica do CRUD, filtros, modais e eventos DOM
-
-
 ## 🚀 Como Inicializar o Projeto com Docker
 
 1. Certifique-se de ter o Docker e o Docker Compose instalados em sua máquina.

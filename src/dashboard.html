@@ -1,0 +1,98 @@
+<!-- src/dashboard.html -->
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FireCards - Admin Dashboard</title>
+    <link rel="stylesheet" href="css/style.css?v=2">
+    <link rel="icon"
+        href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🔥</text></svg>">
+</head>
+
+<body class="dashboard-body">
+
+    <!-- Barra Superior -->
+    <header class="topbar">
+        <div class="logo">
+            <img src="assets/img/Logo.png" alt="FireCards" style="max-height: 55px; width: auto; vertical-align: middle;">
+        </div>
+        <div class="search-container">
+            <input type="text" id="search-input" placeholder="🔍 Pesquisar">
+        </div>
+        <button id="btn-logout" class="btn-logout">Sair</button>
+    </header>
+
+    <!-- Abas de Categorias -->
+    <nav class="category-tabs">
+        <button class="cat-btn active" data-game="all">Todos</button>
+        <button class="cat-btn" data-game="magic">Magic: The Gathering</button>
+        <button class="cat-btn" data-game="yugioh">YuGiOh</button>
+        <button class="cat-btn" data-game="pokemon">Pokémon</button>
+    </nav>
+
+    <div class="dashboard-layout">
+        <!-- Sidebar de Filtros -->
+        <aside class="sidebar">
+            <h3>Filtros</h3>
+            <div class="filter-group">
+                <label style="font-weight: bold; margin-bottom: 15px;">Filtrar por Edição:</label>
+                <div id="edition-filters-container">
+                    <p style="font-size: 13px; color: #666; margin-top: 10px;">Selecione um Card Game acima para ver as
+                        edições.</p>
+                </div>
+            </div>
+            <button class="btn-outline" id="btn-clear-filters" style="margin-top: 20px;">Limpar Filtros</button>
+        </aside>
+
+        <!-- Grid Principal de Cartas -->
+        <main class="cards-grid">
+            <div class="card-item add-new" id="btn-open-modal">
+                <span class="plus-icon">+</span>
+            </div>
+        </main>
+    </div>
+
+    <!-- Modal Laranja para Inclusão/Edição -->
+    <div id="card-modal" class="modal-overlay hidden">
+        <div class="modal-content orange-theme">
+            <button class="close-btn" id="btn-close-modal">X</button>
+
+            <div class="modal-body">
+                <div class="card-preview">
+                    <img src="https://placehold.co/300x420" alt="Preview" id="preview-image">
+                </div>
+
+                <form id="card-form" class="card-form">
+                    <input type="text" id="name_en" placeholder="Nome da Carta (Inglês) *" required>
+                    <input type="text" id="name_pt" placeholder="Nome da Carta (Português)">
+
+                    <select id="game-select" required>
+                        <option value="">Selecione o Card Game *</option>
+                        <option value="magic">Magic: The Gathering</option>
+                        <option value="pokemon">Pokémon</option>
+                        <option value="yugioh">Yu-Gi-Oh!</option>
+                    </select>
+
+                    <select id="edition-select" required disabled>
+                        <option value="">Selecione uma edição *</option>
+                    </select>
+
+                    <input type="text" id="rarity" placeholder="Raridade">
+                    <input type="url" id="image_url" placeholder="URL da Imagem">
+
+                    <div class="modal-actions">
+                        <button type="button" class="btn-warning" id="btn-cancel-modal">Cancelar Alterações</button>
+                        <button type="submit" class="btn-success">Salvar</button>
+                        <button type="button" class="btn-danger">Deletar Carta</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/cards.js"></script>
+</body>
+
+</html>

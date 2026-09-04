@@ -26,7 +26,7 @@ O FireCards foi desenvolvido como solução a um desafio técnico full stack, se
 
 1. Certifique-se de ter o Docker e o Docker Compose instalados em sua máquina.
 2. Clone o repositório ou descompacte a pasta do projeto em sua máquina.
-3. Abra o terminal na pasta raiz do projeto (`/firecards`).
+3. Abra o terminal na pasta raiz do projeto (`CardGame`).
 4. Execute o comando para construir e iniciar os containers em segundo plano:
 
    bash

@@ -30,12 +30,13 @@ O FireCards foi desenvolvido como solução a um desafio técnico full stack, se
 4. Execute o comando para construir e iniciar os containers em segundo plano:
 
    bash
+   
    docker-compose up -d --build
    
 
    O container do banco de dados executará o script `init.sql` automaticamente na primeira inicialização, criando o schema e inserindo um usuário padrão.
 
-5. Acesse o sistema através do seu navegador no endereço:
+6. Acesse o sistema através do seu navegador no endereço:
 
    👉 http://localhost:8080
 

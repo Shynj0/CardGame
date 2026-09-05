@@ -42,7 +42,7 @@ O FireCards foi desenvolvido como solução a um desafio técnico full stack, se
 
 ## 🔑 Credenciais de Acesso (Teste)
 
-Para testar o painel administrativo imediatamente após subir os containers, utilize as credenciais padrão pré-cadastradas:
+Para testar o painel administrativo imediatamente após subir os containers, utilize as credenciais padrão pré-cadastradas ou crie uma conta:
 
 | Campo | Valor |
 |---|---|

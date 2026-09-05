@@ -17,6 +17,6 @@ CREATE TABLE cards (
     rarity VARCHAR(50)
 );
 
--- Senha de teste: 'admin123' (hash gerado com password_hash do PHP)
+-- Senha de teste: 'password' (hash gerado com password_hash do PHP)
 INSERT INTO users (email, password_hash) VALUES 
 ('admin@firecards.com', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi');
